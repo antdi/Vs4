@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/dialogfon"
+    android:background="@color/white"
+    android:layout_gravity="center"
+    android:scaleType="centerCrop"
+    android:padding="10dp"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="10"
+        android:padding="10dp"
+        android:gravity="bottom">
+
+        <Button
+            android:id="@+id/btn_cls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_stroke_yellow_white"
+            android:text="@string/close"
+            android:textColor="@color/yellow95"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/keep1"
+        android:textColor="@color/yellow95"
+        android:layout_weight="90"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textSize="36sp"
+        android:padding="10dp"
+        android:textStyle="bold"
+        />
+
+
+</LinearLayout>
