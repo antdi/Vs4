@@ -18,6 +18,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.io.LineNumberReader;
 import java.util.Random;
 
@@ -28,8 +30,13 @@ public class Lvl1 extends AppCompatActivity {
     public int numLeft; //переменная для левого окна
     public int numRight; //переменная для правого окна
     Array array = new Array();
+    Array arrayKeep = new Array();
+    Array arrayText = new Array();
     Random random = new Random();
     public int count = 0; //счетчик ответов
+    public static int countKeep = 0;
+    public static int countLvl = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +44,10 @@ public class Lvl1 extends AppCompatActivity {
         setContentView(R.layout.universal);
 
         //переменная уровней text_lvl
-        TextView text_lvl = findViewById(R.id.text_lvl);
-        text_lvl.setText(R.string.level1); //установили текст
+        TextView text_lvl = findViewById(R.id.text_lvlдобавлен счетчик уровней/тексты диалогового окна/выход в систему);
+        text_lvl.setText(arrayText.textLvl[countLvl]); //установили текст
+        countLvl++;
+
 
         //код для главных кнопак выбора
         final ImageView img_left = (ImageView) findViewById(R.id.img_left);
@@ -47,7 +56,7 @@ public class Lvl1 extends AppCompatActivity {
         img_right.setClipToOutline(true);
 
 
-        Window w = getWindow();
+        Window w = getWindow(); //игра на весь экран
         w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 
         //вызов окна диалога
@@ -58,6 +67,14 @@ public class Lvl1 extends AppCompatActivity {
         dialogEnd.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,
                 WindowManager.LayoutParams.MATCH_PARENT); //диалоговое акно на весь экран
         dialogEnd.setCancelable(false);//окно нельзя закрыть кнопкой назад
+
+        //текст keep calm
+        TextView textKeep1 = (TextView) dialogEnd.findViewById(R.id.textKeep);
+        textKeep1.setText(arrayKeep.textKeep[countKeep]);
+        countKeep++;
+
+
+
         TextView btnclose = (TextView)dialogEnd.findViewById(R.id.btn_cls); //кнопка закрытия окна диалога
         btnclose.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,6 +89,11 @@ public class Lvl1 extends AppCompatActivity {
 
                 }
                 dialogEnd.dismiss(); //закрываем окно диалога
+                if (countKeep == 5) {
+                    System.exit(0);
+                }
+
+
             }
         });
         Button btncls = (Button) dialogEnd.findViewById(R.id.btn_cls);
@@ -87,6 +109,7 @@ public class Lvl1 extends AppCompatActivity {
                 }
 
                 dialogEnd.dismiss();//закрыть окно диалога
+
             }
         });
 
@@ -177,6 +200,7 @@ public class Lvl1 extends AppCompatActivity {
                     if (count == 10) {
                         //выход из уровня
                         dialogEnd.show();
+
                     } else {
                         numLeft = random.nextInt(10); //генерируем число от 0 до 9
                         img_left.setImageResource(array.images1[numLeft]); //получить из массива рандомную картинку
@@ -243,6 +267,7 @@ public class Lvl1 extends AppCompatActivity {
                     if (count == 10) {
                         //выход из уровня
                         dialogEnd.show();
+
                     } else {
                         numLeft = random.nextInt(10); //генерируем число от 0 до 9
                         img_left.setImageResource(array.images1[numLeft]); //получить из массива рандомную картинку

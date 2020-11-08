@@ -51,7 +51,7 @@
                     android:layout_weight="1"
                     android:gravity="right"
                     android:padding="10dp"
-                    android:text="@string/level"
+                    android:text="@string/level1"
                     android:textColor="@color/yellow95"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -153,12 +153,7 @@
                     android:layout_weight="1"
                     android:src="@drawable/imgtest" />
 
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/one0" />
+
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

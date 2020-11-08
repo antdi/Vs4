@@ -30,7 +30,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textKeep"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:text="@string/keep1"

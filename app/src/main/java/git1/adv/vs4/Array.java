@@ -14,9 +14,13 @@ public class Array {
             R.drawable.one8,
             R.drawable.one9,
     };
+
     final int[] textKeep = {
             R.string.keep1,
             R.string.keep2,
+            R.string.keep3,
+            R.string.keep4,
+            R.string.keep5,
     };
-
+    final int[] textLvl = {R.string.level1, R.string.level2, R.string.level3, R.string.level4, R.string.level5};
 }

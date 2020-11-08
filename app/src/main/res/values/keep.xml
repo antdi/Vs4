@@ -2,4 +2,7 @@
 <resources>
     <string name="keep1">KEEP\nCALM\nAND\nCARRY\nON</string>
     <string name="keep2">KEEP\nCALM\nAND\nREPEAT\nIT AGAIN</string>
+    <string name="keep3">KEEP\nCALM\nAND\nTRY\nAGAIN</string>
+    <string name="keep4">KEEP\nCALM\nAND\nGIVE IT\nANOTHER GO</string>
+    <string name="keep5">KEEP\nCALM\nAND\nGO TO\nWORK</string>
 </resources>

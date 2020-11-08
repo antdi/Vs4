@@ -5,8 +5,11 @@
     <string name="back">BACK</string>
     <string name="classic">CLASSIC</string>
     <string name="hard">HARD</string>
-    <string name="level">LEVEL:</string>
-    <string name="level1">LEVEL: 1</string>
     <string name="close">CLOSE</string>
+    <string name="level1">LEVEL: 1</string>
+    <string name="level2">LEVEL: 2</string>
+    <string name="level3">LEVEL: 3</string>
+    <string name="level4">LEVEL: 4</string>
+    <string name="level5">LAST LEVEL</string>
 
 </resources>
