@@ -44,7 +44,7 @@ public class Lvl1 extends AppCompatActivity {
         setContentView(R.layout.universal);
 
         //переменная уровней text_lvl
-        TextView text_lvl = findViewById(R.id.text_lvlдобавлен счетчик уровней/тексты диалогового окна/выход в систему);
+        TextView text_lvl = findViewById(R.id.text_lvl);
         text_lvl.setText(arrayText.textLvl[countLvl]); //установили текст
         countLvl++;
 
