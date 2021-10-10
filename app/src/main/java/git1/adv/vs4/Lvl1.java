@@ -24,7 +24,6 @@ import java.io.LineNumberReader;
 import java.util.Random;
 
 public class Lvl1 extends AppCompatActivity {
-
     Dialog dialogEnd;
 
     public int numLeft; //переменная для левого окна
@@ -132,7 +131,7 @@ public class Lvl1 extends AppCompatActivity {
             }
         });
 
-        //массив прогресса прохождения
+        //массив прогресса прохождения с сохранением результата
         final int[] progress = {
                 R.id.point1, R.id.point2, R.id.point3, R.id.point4, R.id.point5,
                 R.id.point6, R.id.point7, R.id.point8, R.id.point9, R.id.point10
